@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebijakan Privasi - W-eling</title>
+  <style>
+    :root {
+      --primary: #176B5B;
+      --bg: #F7F5EF;
+      --card: #FFFFFF;
+      --text: #334155;
+      --heading: #0F172A;
+      --muted: #5D6B66;
+      --border: #E2E8F0;
+      --soft: #DDEFEA;
+      --warn-bg: #FFF4E5;
+      --warn-border: #D89A36;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not(.light) {
+        --primary: #72D5BD;
+        --bg: #101815;
+        --card: #17231F;
+        --text: #DCE5E0;
+        --heading: #F1F4EF;
+        --muted: #ADBBB5;
+        --border: #2C3B35;
+        --soft: #22322C;
+        --warn-bg: #2E2615;
+        --warn-border: #E8B763;
+      }
+    }
+    html.dark {
+      --primary: #72D5BD;
+      --bg: #101815;
+      --card: #17231F;
+      --text: #DCE5E0;
+      --heading: #F1F4EF;
+      --muted: #ADBBB5;
+      --border: #2C3B35;
+      --soft: #22322C;
+      --warn-bg: #2E2615;
+      --warn-border: #E8B763;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 20px 15px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card);
+      padding: 32px 26px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+    .header { text-align: center; border-bottom: 1px solid var(--border); padding-bottom: 22px; margin-bottom: 26px; }
+    .badge { display: inline-block; background: var(--soft); color: var(--primary); font-size: 0.85rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    h1 { color: var(--heading); margin: 0 0 8px 0; font-size: 1.8rem; }
+    h2 { color: var(--heading); font-size: 1.2rem; margin: 28px 0 10px 0; }
+    .updated { font-size: 0.88rem; color: var(--muted); margin: 0; }
+    .intro { background: var(--soft); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 8px 8px 0; }
+    .notice { background: var(--warn-bg); border-left: 4px solid var(--warn-border); padding: 14px 18px; border-radius: 0 8px 8px 0; }
+    ul { padding-left: 20px; margin: 8px 0 16px 0; }
+    li { margin-bottom: 9px; }
+    strong { color: var(--heading); }
+    a { color: var(--primary); }
+    .footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--border); text-align: center; font-size: 0.88rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="badge">W-eling · com.eweling</span>
+      <h1>Kebijakan Privasi</h1>
+      <p class="updated">Berlaku dan terakhir diperbarui: 11 September 2026</p>
+    </div>
+
+    <div class="intro">
+      <strong>W-eling</strong> adalah aplikasi pengingat (SIM, STNK, pajak, servis kendaraan, dan catatan tugas) yang dirancang <em>offline-first</em>. Aplikasi ini tidak memiliki server, tidak memerlukan akun, dan tidak mengirim data Anda ke internet. Kebijakan ini menjelaskan data apa yang disimpan, apa yang dibagikan ke perangkat anggota komunitas Anda, dan bagaimana Anda mengendalikannya.
+    </div>
+
+    <h2>Ringkasan</h2>
+    <ul>
+      <li><strong>Tidak ada server W-eling.</strong> Kami tidak mengumpulkan, mengunggah, menjual, atau membagikan data Anda.</li>
+      <li><strong>Tanpa iklan, analitik, atau pelacakan pihak ketiga.</strong></li>
+      <li><strong>Sinkronisasi hanya lewat WiFi/hotspot yang sama</strong>, dan hanya dengan perangkat yang memasukkan kode bergabung komunitas Anda.</li>
+    </ul>
+
+    <h2>1. Data yang Disimpan di Perangkat Anda</h2>
+    <ul>
+      <li><strong>Nama perangkat</strong> yang Anda ketik saat pertama kali membuka aplikasi (misalnya "HP Ayah"), serta ID perangkat acak yang dibuat sekali per instalasi.</li>
+      <li><strong>Data pengingat:</strong> judul, catatan, tanggal jatuh tempo, interval bulan/KM, status selesai, serta foto opsional yang Anda pilih sendiri.</li>
+      <li><strong>Data komunitas:</strong> nama grup, kode bergabung, dan daftar perangkat yang dipasangkan (nama perangkat, alamat IP lokal, dan kunci pasangan untuk sinkronisasi).</li>
+      <li>Seluruh data di atas tersimpan lokal di database dan preferensi aplikasi pada perangkat Anda.</li>
+    </ul>
+
+    <h2>2. Sinkronisasi Jaringan Lokal (P2P)</h2>
+    <ul>
+      <li>Sinkronisasi hanya berjalan antar-perangkat yang terhubung ke <strong>WiFi atau hotspot yang sama</strong>, tanpa melalui internet.</li>
+      <li>Saat aplikasi terbuka, W-eling mengumumkan <strong>nama perangkat</strong> Anda di jaringan lokal (Network Service Discovery) agar dapat ditemukan anggota komunitas. Fitur ini berhenti saat aplikasi berada di latar belakang.</li>
+      <li>Perangkat lain hanya dapat bergabung jika memasukkan <strong>kode bergabung</strong> grup yang benar. Kode tidak dikirim melalui jaringan, dan setiap pesan sinkronisasi diautentikasi dengan kunci pasangan. Data dari perangkat yang tidak dipasangkan ditolak.</li>
+      <li>Data yang dibagikan ke anggota grup: nama perangkat Anda serta pengingat milik grup bersama (judul, catatan, jadwal, dan status). Pengingat <strong>Personal</strong> dan <strong>foto</strong> tidak pernah dikirim ke perangkat lain.</li>
+    </ul>
+
+    <h2>3. Dashboard Web Lokal</h2>
+    <ul>
+      <li>Dashboard web <strong>nonaktif secara bawaan</strong> dan hanya berjalan ketika Anda menyalakannya di menu "Dashboard lokal".</li>
+      <li>Saat aktif, ringkasan dan daftar pengingat komunitas dapat dibuka dari browser perangkat lain di jaringan lokal yang sama setelah memasukkan <strong>PIN acak</strong> yang tampil di aplikasi. PIN berganti setiap kali dashboard dinyalakan, dan sesi login disimpan sebagai cookie di browser tersebut.</li>
+      <li>Matikan dashboard saat tidak digunakan.</li>
+    </ul>
+
+    <h2>4. Izin Aplikasi dan Kegunaannya</h2>
+    <ul>
+      <li><strong>Notifikasi:</strong> menampilkan pengingat yang jatuh tempo.</li>
+      <li><strong>Alarm &amp; pengingat (alarm tepat waktu):</strong> menjadwalkan notifikasi tepat pada waktunya.</li>
+      <li><strong>Berjalan saat perangkat dinyalakan:</strong> menjadwalkan ulang pengingat setelah perangkat restart.</li>
+      <li><strong>Jaringan &amp; WiFi:</strong> hanya untuk sinkronisasi lokal dan dashboard web lokal. Izin "internet" diperlukan Android untuk koneksi jaringan lokal; aplikasi tidak menghubungi server di internet.</li>
+      <li><strong>Foto:</strong> dipilih melalui Photo Picker Android, sehingga aplikasi hanya dapat mengakses foto yang Anda pilih, tanpa izin akses penyimpanan penuh.</li>
+    </ul>
+
+    <h2>5. Iklan, Analitik, dan Pihak Ketiga</h2>
+    <p>W-eling tidak memuat SDK iklan, analitik, pelacakan, atau pelaporan crash pihak ketiga, dan tidak membagikan data kepada pihak ketiga mana pun.</p>
+
+    <h2>6. Pencadangan Data (Backup)</h2>
+    <ul>
+      <li>Jika fitur cadangan Android/Google di perangkat Anda aktif, data pengingat dan preferensi aplikasi dapat ikut dicadangkan dan dipulihkan oleh sistem Android sesuai pengaturan dan kebijakan Google.</li>
+      <li>Identitas perangkat dan kunci pasangan sinkronisasi dikecualikan dari cadangan, sehingga perangkat baru perlu dipasangkan ulang.</li>
+    </ul>
+
+    <h2>7. Keamanan</h2>
+    <ul>
+      <li>Pesan sinkronisasi diautentikasi dengan kunci pasangan dan dilindungi dari pemutaran ulang, dan percobaan bergabung atau login dashboard yang gagal berulang kali akan dikunci sementara.</li>
+      <li>Isi pesan sinkronisasi dan dashboard lokal <strong>belum dienkripsi</strong> (HTTP biasa). Gunakan jaringan WiFi yang Anda percaya dan bagikan kode bergabung hanya kepada anggota yang Anda kenal.</li>
+    </ul>
+
+    <h2>8. Penyimpanan dan Penghapusan Data</h2>
+    <ul>
+      <li>Data disimpan sampai Anda menghapusnya.</li>
+      <li>Anda dapat menghapus pengingat kapan saja di aplikasi, menghapus seluruh data melalui <em>Pengaturan Android → Aplikasi → W-eling → Penyimpanan → Hapus data</em>, atau mencopot pemasangan aplikasi.</li>
+      <li>Data yang sudah tersinkron ke perangkat anggota lain tersimpan di perangkat tersebut dan perlu dihapus dari perangkat itu.</li>
+    </ul>
+
+    <h2>9. Anak-anak</h2>
+    <p>W-eling tidak ditujukan untuk anak di bawah 13 tahun dan tidak dengan sengaja mengumpulkan data dari anak-anak.</p>
+
+    <h2>10. Perubahan Kebijakan</h2>
+    <p>Kebijakan ini dapat diperbarui mengikuti perubahan fitur aplikasi. Tanggal pembaruan terakhir tercantum di bagian atas halaman ini. Perubahan penting akan disertakan dalam pembaruan aplikasi.</p>
+
+    <h2>11. Hubungi Kami</h2>
+    <p>Pertanyaan, permintaan, atau keluhan terkait privasi dapat dikirim ke <a href="mailto:anangeko9@gmail.com">anangeko9@gmail.com</a>.</p>
+
+    <div class="footer">&copy; 2026 W-eling</div>
+  </div>
+</body>
+</html>
