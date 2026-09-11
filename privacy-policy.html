@@ -82,13 +82,13 @@
     </div>
 
     <div class="intro">
-      <strong>W-eling</strong> adalah aplikasi pengingat (SIM, STNK, pajak, servis kendaraan, dan catatan tugas) yang dirancang <em>offline-first</em>. Aplikasi ini tidak memiliki server, tidak memerlukan akun, dan tidak mengirim data Anda ke internet. Kebijakan ini menjelaskan data apa yang disimpan, apa yang dibagikan ke perangkat anggota komunitas Anda, dan bagaimana Anda mengendalikannya.
+      <strong>W-eling</strong> adalah aplikasi pengingat (SIM, STNK, pajak, servis kendaraan, dan catatan tugas) yang dirancang <em>offline-first</em>. Aplikasi ini tidak memiliki server dan tidak memerlukan akun; data pengingat Anda tidak pernah dikirim ke internet. Kebijakan ini menjelaskan data apa yang disimpan, apa yang dibagikan ke perangkat anggota komunitas Anda, dan bagaimana Anda mengendalikannya.
     </div>
 
     <h2>Ringkasan</h2>
     <ul>
-      <li><strong>Tidak ada server W-eling.</strong> Kami tidak mengumpulkan, mengunggah, menjual, atau membagikan data Anda.</li>
-      <li><strong>Tanpa iklan, analitik, atau pelacakan pihak ketiga.</strong></li>
+      <li><strong>Tidak ada server W-eling.</strong> Kami tidak mengumpulkan, mengunggah, menjual, atau membagikan data pengingat Anda.</li>
+      <li><strong>Iklan dari Google AdMob ditampilkan sesekali</strong> (saat aplikasi dibuka kembali setelah beberapa hari tidak dipakai, atau setelah Anda menyelesaikan perpanjangan pengingat). Google dapat mengumpulkan data perangkat untuk iklan (lihat bagian 5).</li>
       <li><strong>Sinkronisasi hanya lewat WiFi/hotspot yang sama</strong>, dan hanya dengan perangkat yang memasukkan kode bergabung komunitas Anda.</li>
     </ul>
 
@@ -120,12 +120,20 @@
       <li><strong>Notifikasi:</strong> menampilkan pengingat yang jatuh tempo.</li>
       <li><strong>Alarm &amp; pengingat (alarm tepat waktu):</strong> menjadwalkan notifikasi tepat pada waktunya.</li>
       <li><strong>Berjalan saat perangkat dinyalakan:</strong> menjadwalkan ulang pengingat setelah perangkat restart.</li>
-      <li><strong>Jaringan &amp; WiFi:</strong> hanya untuk sinkronisasi lokal dan dashboard web lokal. Izin "internet" diperlukan Android untuk koneksi jaringan lokal; aplikasi tidak menghubungi server di internet.</li>
+      <li><strong>Jaringan &amp; WiFi (termasuk internet):</strong> sinkronisasi lokal, dashboard web lokal, dan memuat iklan Google AdMob. Data pengingat tidak dikirim ke internet.</li>
+      <li><strong>ID iklan:</strong> ditambahkan oleh SDK Google AdMob untuk menayangkan dan mengukur iklan.</li>
       <li><strong>Foto:</strong> dipilih melalui Photo Picker Android, sehingga aplikasi hanya dapat mengakses foto yang Anda pilih, tanpa izin akses penyimpanan penuh.</li>
     </ul>
 
-    <h2>5. Iklan, Analitik, dan Pihak Ketiga</h2>
-    <p>W-eling tidak memuat SDK iklan, analitik, pelacakan, atau pelaporan crash pihak ketiga, dan tidak membagikan data kepada pihak ketiga mana pun.</p>
+    <h2>5. Iklan (Google AdMob)</h2>
+    <ul>
+      <li>W-eling menampilkan iklan layar penuh dari Google AdMob secara terbatas: saat aplikasi dibuka kembali setelah tidak dipakai beberapa hari, atau setelah Anda menyelesaikan perpanjangan pengingat.</li>
+      <li>Untuk menayangkan dan mengukur iklan serta mencegah penipuan, Google dapat mengumpulkan data seperti ID iklan perangkat, alamat IP (termasuk perkiraan lokasi dari IP), informasi perangkat, interaksi dengan iklan, dan data diagnostik. Data ini dikelola Google sesuai <a href="https://policies.google.com/privacy">Kebijakan Privasi Google</a> dan penjelasan <a href="https://policies.google.com/technologies/partner-sites">cara Google menggunakan data dari aplikasi mitra</a>.</li>
+      <li>W-eling tidak mengirim data pengingat, catatan, foto, atau data komunitas Anda ke AdMob.</li>
+      <li>Jika hukum di wilayah Anda mewajibkan persetujuan (misalnya EEA atau Inggris), aplikasi meminta persetujuan terlebih dahulu, dan pilihan dapat diubah melalui menu <strong>Privasi iklan</strong>.</li>
+      <li>Anda dapat mereset atau menghapus ID iklan dan mengatur personalisasi iklan melalui pengaturan Android (Google → Iklan, atau Privasi → Iklan).</li>
+      <li>Selain AdMob, W-eling tidak memuat SDK analitik, pelacakan, atau pelaporan crash pihak ketiga.</li>
+    </ul>
 
     <h2>6. Pencadangan Data (Backup)</h2>
     <ul>
